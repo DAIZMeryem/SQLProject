@@ -22,7 +22,7 @@ Date/time manipulation
 ## 🗂️ Project Structure
 layoffs-analysis: 
 <pre>
-- dataset/                                 # **Original dataset file**
+- dataset/                                 # Original dataset file
 - 1_data_cleaning.sql                      # Data standardization & preparation
 - 2_layoff_trends_analysis.sql             # EDA and basic trends
 - 3_advanced_queries.sql                   # Complex analytical queries
