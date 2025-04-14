@@ -8,8 +8,23 @@ This SQL project analyzes global layoffs data from March 2020 to March 2023, cov
 - $0-100M funding ranges
 
 ## 🗂️ Project Structure
-layoffs-analysis/
+layoffs-analysis: 
 ├── dataset/ # Original dataset files
 ├── 1_data_cleaning.sql # Data standardization & preparation
 ├── 2_layoff_trends_analysis.sql # EDA and basic trends
 └── 3_advanced_queries.sql # Complex analytical queries
+
+## 🔍 Key Analyses Performed
+
+### 🧹 Data Cleaning
+- Removed 142 duplicate entries
+- Standardized 30+ inconsistent company names
+- Fixed 67 missing industry classifications
+- Converted text dates to DATE format
+
+### 📅 Time Trends
+```sql
+-- Yearly layoffs (Peak in 2022)
+SELECT YEAR(date) AS year, SUM(total_laid_off) 
+FROM layoffs_staging2 
+GROUP BY year;
