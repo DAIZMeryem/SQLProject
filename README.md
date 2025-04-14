@@ -22,14 +22,6 @@ layoffs-analysis:
 - Fixed 67 missing industry classifications
 - Converted text dates to DATE format
 
-### 📅 Time Trends
-```sql
--- Yearly layoffs (Peak in 2022)
-SELECT YEAR(date) AS year, SUM(total_laid_off) 
-FROM layoffs_staging2 
-GROUP BY year; ```
-
-
 ### 🏭 Industry Impact
 
 Top 5 Most Affected:
@@ -53,3 +45,10 @@ FROM layoffs_staging2
 GROUP BY country 
 ORDER BY 2 DESC 
 LIMIT 5;
+
+### 📅 Time Trends
+```sql
+-- Yearly layoffs (Peak in 2022)
+SELECT YEAR(date) AS year, SUM(total_laid_off) 
+FROM layoffs_staging2 
+GROUP BY year; 
