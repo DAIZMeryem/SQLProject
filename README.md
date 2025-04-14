@@ -3,9 +3,8 @@
 ## 📖 Overview
 This SQL project analyzes global layoffs data from March 2020 to March 2023, covering:
 - 1,800+ layoff events
-- 30+ industries
+- 30 industries
 - 50+ countries
-- $0-100M funding ranges
 
 ## 🛠️ Technical Details
 Database: MySQL
@@ -22,10 +21,10 @@ Date/time manipulation
 
 ## 🗂️ Project Structure
 layoffs-analysis: 
-- dataset/ # Original dataset files
-- 1_data_cleaning.sql # Data standardization & preparation
-- 2_layoff_trends_analysis.sql # EDA and basic trends
-- 3_advanced_queries.sql # Complex analytical queries
+- dataset/                                 # Original dataset files
+- 1_data_cleaning.sql                      # Data standardization & preparation
+- 2_layoff_trends_analysis.sql             # EDA and basic trends
+- 3_advanced_queries.sql                   # Complex analytical queries
 
 ## 🔍 Key Analyses Performed
 
@@ -55,7 +54,9 @@ Healthcare (7%)
 -- Yearly layoffs (Peak in 2022)
 SELECT YEAR(date) AS year, SUM(total_laid_off) 
 FROM layoffs_staging2 
-GROUP BY year; 
+GROUP BY year;
+``` 
+
 
 ### 🌎 Geographic Trends
 ```sql
