@@ -27,7 +27,7 @@ layoffs-analysis:
 -- Yearly layoffs (Peak in 2022)
 SELECT YEAR(date) AS year, SUM(total_laid_off) 
 FROM layoffs_staging2 
-GROUP BY year;
+GROUP BY year; ```
 
 
 ### 🏭 Industry Impact
