@@ -21,30 +21,31 @@ Date/time manipulation
 
 ## 🗂️ Project Structure
 layoffs-analysis: 
-- dataset/                                 # Original dataset files
+<pre>
+- dataset/                                 # ** Original dataset files **
 - 1_data_cleaning.sql                      # Data standardization & preparation
 - 2_layoff_trends_analysis.sql             # EDA and basic trends
 - 3_advanced_queries.sql                   # Complex analytical queries
-
+</pre>
 ## 🔍 Key Analyses Performed
 
 ### 🧹 Data Cleaning
-- Removed 142 duplicate entries
-- Standardized 30+ inconsistent company names
-- Fixed 67 missing industry classifications
+- Removed  duplicate entries
+- Standardized  inconsistent company names
+- Fixed missing industry classifications
 - Converted text dates to DATE format
 
 ### 🏭 Industry Impact
 
 Top 5 Most Affected:
 
-Consumer (32%)
+Consumer (12%)
 
-Retail (19%)
+Retail (11%)
 
-Transportation (12%)
+Transportation (9%)
 
-Finance (9%)
+Finance (7%)
 
 Healthcare (7%)
 
