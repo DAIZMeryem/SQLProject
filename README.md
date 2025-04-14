@@ -28,3 +28,28 @@ layoffs-analysis:
 SELECT YEAR(date) AS year, SUM(total_laid_off) 
 FROM layoffs_staging2 
 GROUP BY year;
+
+
+### 🏭 Industry Impact
+
+Top 5 Most Affected:
+
+Consumer (32%)
+
+Retail (19%)
+
+Transportation (12%)
+
+Finance (9%)
+
+Healthcare (7%)
+
+### 🌎 Geographic Trends
+sql
+Copy
+-- Countries with most layoffs
+SELECT country, SUM(total_laid_off) 
+FROM layoffs_staging2
+GROUP BY country 
+ORDER BY 2 DESC 
+LIMIT 5;
