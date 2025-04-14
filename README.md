@@ -7,6 +7,19 @@ This SQL project analyzes global layoffs data from March 2020 to March 2023, cov
 - 50+ countries
 - $0-100M funding ranges
 
+## 🛠️ Technical Details
+Database: MySQL
+
+Key Techniques:
+
+Window functions (ROW_NUMBER, RANK)
+
+Common Table Expressions (CTEs)
+
+Advanced joins and subqueries
+
+Date/time manipulation
+
 ## 🗂️ Project Structure
 layoffs-analysis: 
 ├── dataset/ # Original dataset files
@@ -36,15 +49,6 @@ Finance (9%)
 
 Healthcare (7%)
 
-### 🌎 Geographic Trends
-sql
-Copy
--- Countries with most layoffs
-SELECT country, SUM(total_laid_off) 
-FROM layoffs_staging2
-GROUP BY country 
-ORDER BY 2 DESC 
-LIMIT 5;
 
 ### 📅 Time Trends
 ```sql
@@ -52,3 +56,13 @@ LIMIT 5;
 SELECT YEAR(date) AS year, SUM(total_laid_off) 
 FROM layoffs_staging2 
 GROUP BY year; 
+
+### 🌎 Geographic Trends
+```sql
+-- Countries with most layoffs
+SELECT country, SUM(total_laid_off) 
+FROM layoffs_staging2
+GROUP BY country 
+ORDER BY 2 DESC 
+LIMIT 5;
+
